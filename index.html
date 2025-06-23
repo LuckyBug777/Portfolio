@@ -604,6 +604,7 @@
             
             .project-carousel {
                 flex-direction: column;
+                gap: 1rem;
             }
             
             .project-card {
@@ -611,15 +612,51 @@
             }
             
             .skills-ecosystem {
-                height: 500px;
+                height: 1000px;
+                padding: 30px 15px;
             }
             
-            .project-carousel {
-                gap: 1rem;
+            /* Make skill bubbles smaller and better positioned for mobile */
+            .skill-bubble {
+                font-size: 0.7rem !important;
+                min-width: 60px !important;
+                min-height: 60px !important;
+                max-width: 80px !important;
+                max-height: 80px !important;
+                padding: 8px !important;
+                text-align: center;
+                line-height: 1.2;
+                margin: 3px !important;
             }
             
-            .project-card {
-                min-width: 280px;
+            /* Adjust skills section padding for mobile */
+            .skills {
+                padding: 80px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .skills-ecosystem {
+                height: 1200px;
+                padding: 40px 10px;
+            }
+            
+            .skill-bubble {
+                font-size: 0.6rem !important;
+                min-width: 50px !important;
+                min-height: 50px !important;
+                max-width: 70px !important;
+                max-height: 70px !important;
+                padding: 6px !important;
+                margin: 4px !important;
+            }
+            
+            .skills {
+                padding: 60px 15px;
             }
         }
     </style>
@@ -688,7 +725,7 @@
                 <p class="service-description">Expert Flutter & Dart development with Firebase integration. Built healthcare apps like BabyCare, CareGuardian, and Pregacare with ML-powered features.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">�</div>
+                <div class="service-icon">🤖</div>
                 <h3 class="service-title">AI/ML Solutions</h3>
                 <p class="service-description">TensorFlow, scikit-learn, and OpenCV expertise. Developed GANs for data augmentation, computer vision models, and predictive analytics systems.</p>
             </div>
@@ -698,7 +735,17 @@
                 <p class="service-description">Full-stack solutions with database management (MySQL, Firebase) and API integrations (ChatGPT, Gemini). Built voting systems and multimedia generators.</p>
             </div>
             <div class="service-card">
+                <div class="service-icon">⚙️</div>
+                <h3 class="service-title">Backend Development</h3>
+                <p class="service-description">Robust server-side architecture with Python, PHP, and database optimization. API development, cloud integrations, and scalable system design.</p>
+            </div>
+            <div class="service-card">
                 <div class="service-icon">📊</div>
+                <h3 class="service-title">Data Analytics</h3>
+                <p class="service-description">Advanced data analysis and visualization using Python, statistical modeling, and machine learning. Transform raw data into actionable business insights.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">💼</div>
                 <h3 class="service-title">Data Solutions</h3>
                 <p class="service-description">Big data normalization, court data scraping, and FinTech systems. Currently building high-performance trading platforms at Kambala Solutions.</p>
             </div>
@@ -711,7 +758,7 @@
         <div class="projects-container">
             <div class="project-carousel">
                 <div class="project-card">
-                    <div class="project-image">�</div>
+                    <div class="project-image">🤱</div>
                     <div class="project-info">
                         <h3 class="project-title">BabyCare App</h3>
                         <p>Flutter-based child development tracking with ML-powered milestone assessment, Down syndrome & autism detection, and doctor dashboard integration.</p>
@@ -737,7 +784,7 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-image">�</div>
+                    <div class="project-image">📽️</div>
                     <div class="project-info">
                         <h3 class="project-title">Text-to-Video Generator</h3>
                         <p>AI-powered multimedia creation tool with ChatGPT API integration, automated video synthesis, and advanced image morphing capabilities.</p>
@@ -953,6 +1000,39 @@
                         </div>
                         <p style="font-size: 0.9rem;">Animation & Gaming Theme, SMVITM</p>
                     </div>
+                    
+                    <div class="achievement-badge service-card" style="background: linear-gradient(45deg, rgba(138,43,226,0.1), rgba(75,0,130,0.1)); border-color: #8a2be2;">
+                        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                            <span style="font-size: 2.5rem; margin-right: 1rem;">🏅</span>
+                            <div>
+                                <h4 style="color: #8a2be2; margin: 0;">4th Prize</h4>
+                                <p style="margin: 0; opacity: 0.8;">District Level Project Competition 2022</p>
+                            </div>
+                        </div>
+                        <p style="font-size: 0.9rem;">Anveshana 2022, Dharwad Section, Agastya Foundation</p>
+                    </div>
+                    
+                    <div class="achievement-badge service-card" style="background: linear-gradient(45deg, rgba(255,69,0,0.1), rgba(255,140,0,0.1)); border-color: #ff4500;">
+                        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                            <span style="font-size: 2.5rem; margin-right: 1rem;">🎖️</span>
+                            <div>
+                                <h4 style="color: #ff4500; margin: 0;">3rd Prize</h4>
+                                <p style="margin: 0; opacity: 0.8;">Mini Project Competition, SMVITM 2022</p>
+                            </div>
+                        </div>
+                        <p style="font-size: 0.9rem;">College-level recognition achievement</p>
+                    </div>
+                    
+                    <div class="achievement-badge service-card" style="background: linear-gradient(45deg, rgba(57,255,20,0.1), rgba(34,139,34,0.1)); border-color: #39ff14;">
+                        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                            <span style="font-size: 2.5rem; margin-right: 1rem;">🏆</span>
+                            <div>
+                                <h4 style="color: #39ff14; margin: 0;">4th Prize</h4>
+                                <p style="margin: 0; opacity: 0.8;">Mini Project Competition 2021</p>
+                            </div>
+                        </div>
+                        <p style="font-size: 0.9rem;">Online Voting System project achievement</p>
+                    </div>
                 </div>
             </div>
 
@@ -1092,7 +1172,6 @@
             <a href="mailto:prathviz.111@gmail.com" class="social-link" title="Email">📧</a>
             <a href="https://www.linkedin.com/in/prathvirajprabhu/" class="social-link" title="LinkedIn" target="_blank">💼</a>
             <a href="https://github.com/LuckyBug777" class="social-link" title="GitHub" target="_blank">🐙</a>
-            <a href="tel:+918546954246" class="social-link" title="Phone">�</a>
         </div>
         <p>&copy; 2025 Prathviraj. Transforming ideas into intelligent digital solutions.</p>
     </footer>
@@ -1338,7 +1417,10 @@
             }
 
             setupSkillsBubbles() {
-                const skills = [
+                const isMobile = window.innerWidth <= 768;
+                const isSmallMobile = window.innerWidth <= 480;
+                
+                let skills = [
                     // Programming Languages
                     { name: 'Python', size: 95, x: 15, y: 20, color: '#ffd43b' },
                     { name: 'Dart', size: 90, x: 75, y: 15, color: '#0175c2' },
@@ -1374,6 +1456,27 @@
                     { name: 'ChatGPT API', size: 80, x: 90, y: 25, color: '#00a67e' },
                     { name: 'Gemini API', size: 75, x: 5, y: 65, color: '#4285f4' }
                 ];
+
+                // For mobile screens, adjust positioning to prevent overlap
+                if (isMobile) {
+                    skills = skills.map((skill, index) => {
+                        const skillsPerRow = isSmallMobile ? 3 : 4; // 3 columns for very small screens, 4 for tablets
+                        const row = Math.floor(index / skillsPerRow);
+                        const col = index % skillsPerRow;
+                        
+                        const horizontalSpacing = isSmallMobile ? 30 : 22; // More spacing between columns
+                        const verticalSpacing = isSmallMobile ? 22 : 18;   // More spacing between rows
+                        const startX = isSmallMobile ? 5 : 8;              // Start position from left
+                        const startY = 5;                                  // Start position from top
+                        
+                        return {
+                            ...skill,
+                            x: startX + (col * horizontalSpacing),         // More spaced horizontally
+                            y: startY + (row * verticalSpacing),           // More spaced vertically
+                            size: isSmallMobile ? Math.max(skill.size * 0.6, 50) : Math.max(skill.size * 0.7, 60)
+                        };
+                    });
+                }
                 
                 const container = document.getElementById('skillsEcosystem');
                 
@@ -1397,16 +1500,27 @@
                     const proficiency = Math.round((skill.size / 95) * 100);
                     bubble.setAttribute('data-proficiency', proficiency + '%');
                     bubble.addEventListener('mouseenter', () => {
-                        bubble.style.transform = `scale(1.3)`;
-                        bubble.innerHTML = `${skill.name}<br><small>${proficiency}%</small>`;
-                        bubble.style.fontSize = '0.8rem';
+                        if (!isMobile) {
+                            bubble.style.transform = `scale(1.3)`;
+                            bubble.innerHTML = `${skill.name}<br><small>${proficiency}%</small>`;
+                            bubble.style.fontSize = '0.8rem';
+                        }
                     });
                     
                     bubble.addEventListener('mouseleave', () => {
-                        bubble.style.transform = 'scale(1)';
-                        bubble.innerHTML = skill.name;
-                        bubble.style.fontSize = '0.9rem';
+                        if (!isMobile) {
+                            bubble.style.transform = 'scale(1)';
+                            bubble.innerHTML = skill.name;
+                            bubble.style.fontSize = '0.9rem';
+                        }
                     });
+                    
+                    // For mobile, show proficiency on tap/click
+                    if (isMobile) {
+                        bubble.addEventListener('click', () => {
+                            bubble.innerHTML = bubble.innerHTML.includes('%') ? skill.name : `${skill.name}<br><small>${proficiency}%</small>`;
+                        });
+                    }
                     
                     container.appendChild(bubble);
                 });
