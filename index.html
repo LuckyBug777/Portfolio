@@ -612,8 +612,8 @@
             }
             
             .skills-ecosystem {
-                height: 1000px;
-                padding: 30px 15px;
+                height: 700px;
+                padding: 25px 15px;
             }
             
             /* Make skill bubbles smaller and better positioned for mobile */
@@ -641,8 +641,8 @@
             }
             
             .skills-ecosystem {
-                height: 1200px;
-                padding: 40px 10px;
+                height: 800px;
+                padding: 30px 10px;
             }
             
             .skill-bubble {
@@ -1460,20 +1460,24 @@
                 // For mobile screens, adjust positioning to prevent overlap
                 if (isMobile) {
                     skills = skills.map((skill, index) => {
-                        const skillsPerRow = isSmallMobile ? 3 : 4; // 3 columns for very small screens, 4 for tablets
+                        const skillsPerRow = isSmallMobile ? 4 : 5; // 4 columns for small screens, 5 for tablets
                         const row = Math.floor(index / skillsPerRow);
                         const col = index % skillsPerRow;
                         
-                        const horizontalSpacing = isSmallMobile ? 30 : 22; // More spacing between columns
-                        const verticalSpacing = isSmallMobile ? 22 : 18;   // More spacing between rows
-                        const startX = isSmallMobile ? 5 : 8;              // Start position from left
-                        const startY = 5;                                  // Start position from top
+                        const horizontalSpacing = isSmallMobile ? 18 : 16; // Reduced spacing between columns
+                        const verticalSpacing = isSmallMobile ? 14 : 12;   // Reduced spacing between rows
+                        const startX = isSmallMobile ? 8 : 6;              // Start position from left
+                        const startY = 8;                                  // Start position from top
+                        
+                        // Add small random offset for more natural positioning
+                        const randomOffsetX = (Math.random() - 0.5) * 4; // ±2% random offset
+                        const randomOffsetY = (Math.random() - 0.5) * 3; // ±1.5% random offset
                         
                         return {
                             ...skill,
-                            x: startX + (col * horizontalSpacing),         // More spaced horizontally
-                            y: startY + (row * verticalSpacing),           // More spaced vertically
-                            size: isSmallMobile ? Math.max(skill.size * 0.6, 50) : Math.max(skill.size * 0.7, 60)
+                            x: Math.max(2, Math.min(88, startX + (col * horizontalSpacing) + randomOffsetX)), // Keep within bounds
+                            y: Math.max(5, Math.min(85, startY + (row * verticalSpacing) + randomOffsetY)),   // Keep within bounds
+                            size: isSmallMobile ? Math.max(skill.size * 0.65, 45) : Math.max(skill.size * 0.75, 55)
                         };
                     });
                 }
